@@ -41,7 +41,7 @@ export class ContactForm extends Component {
             required
             onChange={this.handleChange}
           />
-          <button className={css.btn}>Add contact</button>
+          <button className={css.button}>Add contact</button>
         </form>
       </>
     );
