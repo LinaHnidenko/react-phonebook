@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import css from './ContactsList.module.css';
 export const ContactList = ({ contacts, deleteContactFromList }) => {
   return (
