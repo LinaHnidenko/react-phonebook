@@ -32,6 +32,7 @@ export class ContactForm extends Component {
             name="name"
             required
             onChange={this.handleChange}
+            value={this.state.name}
           />
           <label>Phone</label>
           <input
@@ -40,6 +41,7 @@ export class ContactForm extends Component {
             name="number"
             required
             onChange={this.handleChange}
+            value={this.state.number}
           />
           <button className={css.button}>Add contact</button>
         </form>
