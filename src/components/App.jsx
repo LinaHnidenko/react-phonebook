@@ -45,19 +45,20 @@ export class App extends Component {
     this.setState({ filter: ev.currentTarget.value });
   };
 
-  filterContacts = () => {
-    const { filter, contacts } = this.state;
-    const lowerFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(lowerFilter)
-    );
-  };
-
   deleteContactFromList = id => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
     }));
   };
+
+  filterContacts = () => {
+    // const { contacts, filter } = this.state;
+    const lowerFilter = this.state.filter.toLowerCase();
+    return this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(lowerFilter)
+    );
+  };
+
   render() {
     const filteredContacts = this.filterContacts();
 
